@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLink - Loan Application</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-400 shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white">GreenLink</div>
+      <nav>
+        <ul class="hidden md:flex space-x-6 text-white">
+          <li><a href="index.html" class="hover:text-green-900">Home</a></li>
+          <li><a href="farmers.html" class="hover:text-green-900">Farmers</a></li>
+          <li><a href="loan-application.html" class="hover:text-green-900">Apply Loan</a></li>
+          <li><a href="profile.html" class="hover:text-green-900">Profile</a></li>
+          <li><a href="signin.html" class="hover:text-green-900">Sign Out</a></li>
+        </ul>
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-green-400">
+      <ul class="px-4 pt-2 pb-4 space-y-2 text-white">
+        <li><a href="index.html" class="block hover:text-green-900">Home</a></li>
+        <li><a href="farmers.html" class="block hover:text-green-900">Farmers</a></li>
+        <li><a href="loan-application.html" class="block hover:text-green-900">Apply Loan</a></li>
+        <li><a href="profile.html" class="block hover:text-green-900">Profile</a></li>
+        <li><a href="signin.html" class="block hover:text-green-900">Sign Out</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Loan Application Form -->
+  <section class="py-16">
+    <div class="container mx-auto max-w-lg px-4">
+      <h1 class="text-3xl font-bold text-center text-green-900 mb-6">New Loan Application</h1>
+      <form class="bg-white p-6 rounded shadow">
+        <div class="mb-4">
+          <label class="block text-green-800 mb-2" for="amount">Loan Amount (NGN)</label>
+          <input class="w-full border border-gray-300 p-2 rounded" type="number" id="amount" placeholder="e.g., 50000" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-green-800 mb-2" for="term">Repayment Term (months)</label>
+          <input class="w-full border border-gray-300 p-2 rounded" type="number" id="term" placeholder="e.g., 6" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-green-800 mb-2" for="purpose">Purpose of Loan</label>
+          <select id="purpose" class="w-full border border-gray-300 p-2 rounded">
+            <option value="seeds">Seeds</option>
+            <option value="equipment">Equipment</option>
+            <option value="maintenance">Maintenance</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label class="block text-green-800 mb-2" for="additional">Additional Information</label>
+          <textarea id="additional" class="w-full border border-gray-300 p-2 rounded" placeholder="Enter any additional details" rows="3"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 py-6">
+    <div class="container mx-auto text-center px-4">
+      <p class="text-green-100">&copy; 2023 GreenLink. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

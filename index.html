@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLink - Connecting Farmers & Lenders</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-green-400 shadow">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-white">GreenLink</div>
+      <nav>
+        <ul class="hidden md:flex space-x-4 text-white">
+          <li><a href="index.html" class="hover:text-green-900">Home</a></li>
+          <li><a href="farmers.html" class="hover:text-green-900">Farmers</a></li>
+          <li><a href="lender-dashboard.html" class="hover:text-green-900">Lender Dashboard</a></li>
+          <li><a href="loan-application.html" class="hover:text-green-900">Loan Application</a></li>
+          <li><a href="pending-applications.html" class="hover:text-green-900">Pending Applications</a></li>
+          <li><a href="profile.html" class="hover:text-green-900">Profile</a></li>
+          <li><a href="signin.html" class="hover:text-green-900">Sign In</a></li>
+          <li><a href="signup.html" class="hover:text-green-900">Sign Up</a></li>
+        </ul>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-green-400">
+      <ul class="px-4 pt-2 pb-4 space-y-2 text-white">
+        <li><a href="index.html" class="block hover:text-green-900">Home</a></li>
+        <li><a href="farmers.html" class="block hover:text-green-900">Farmers</a></li>
+        <li><a href="lender-dashboard.html" class="block hover:text-green-900">Lender Dashboard</a></li>
+        <li><a href="loan-application.html" class="block hover:text-green-900">Loan Application</a></li>
+        <li><a href="pending-applications.html" class="block hover:text-green-900">Pending Applications</a></li>
+        <li><a href="profile.html" class="block hover:text-green-900">Profile</a></li>
+        <li><a href="signin.html" class="block hover:text-green-900">Sign In</a></li>
+        <li><a href="signup.html" class="block hover:text-green-900">Sign Up</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-green-200 py-20">
+    <div class="container mx-auto text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-green-900 mb-4">Connecting Farmers with Lenders</h1>
+      <p class="text-xl md:text-2xl text-green-700 mb-8">
+        GreenLink is your digital bridge to accessible microfinance, empowering smallholder farmers to grow and succeed.
+      </p>
+      <a href="signup.html" class="bg-green-600 text-white py-3 px-6 rounded hover:bg-green-700 transition">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-green-900 mb-12">Our Key Features</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-green-50 p-6 rounded shadow text-center transition transform duration-300 hover:scale-105">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Digital Loan Application</h3>
+          <p class="text-green-700">Apply for microloans easily with our simple, intuitive interface.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-green-50 p-6 rounded shadow text-center transition transform duration-300 hover:scale-105">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Automated Risk Assessment</h3>
+          <p class="text-green-700">Quick, data-driven evaluations to determine loan eligibility.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-green-50 p-6 rounded shadow text-center transition transform duration-300 hover:scale-105">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Real-Time Loan Matching</h3>
+          <p class="text-green-700">Connect directly with a network of lenders ready to support your growth.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="bg-green-50 p-6 rounded shadow text-center transition transform duration-300 hover:scale-105">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Surplus Marketplace</h3>
+          <p class="text-green-700">Sell excess produce or secure essential inputs through our integrated platform.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="bg-green-50 p-6 rounded shadow text-center transition transform duration-300 hover:scale-105">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Transparent Pricing</h3>
+          <p class="text-green-700">Access up-to-date market information and loan terms in real time.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="bg-green-50 p-6 rounded shadow text-center transition transform duration-300 hover:scale-105">
+          <h3 class="text-xl font-semibold text-green-800 mb-2">Secure Transactions</h3>
+          <p class="text-green-700">Enjoy encrypted financial transactions ensuring complete security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="bg-green-400 py-12">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Grow Your Farm?</h2>
+      <p class="text-lg text-green-100 mb-6">
+        Join GreenLink today and unlock the financial support you need to succeed.
+      </p>
+      <a href="signup.html" class="bg-green-600 text-white py-3 px-8 rounded hover:bg-green-700 transition">
+        Sign Up Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 py-6">
+    <div class="container mx-auto text-center px-4">
+      <p class="text-green-100">&copy; 2023 GreenLink. All Rights Reserved.</p>
+      <p class="mt-2">
+        <a href="about.html" class="text-green-100 hover:text-green-300">About</a> |
+        <a href="contact.html" class="text-green-100 hover:text-green-300">Contact</a> |
+        <a href="faq.html" class="text-green-100 hover:text-green-300">FAQ</a> |
+        <a href="terms.html" class="text-green-100 hover:text-green-300">Terms & Conditions</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
