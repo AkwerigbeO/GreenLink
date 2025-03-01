@@ -58,11 +58,10 @@
   <!-- Footer -->
   <footer class="bg-green-900 py-6">
     <div class="container mx-auto text-center px-4">
-      <p class="text-green-100">&copy; 2023 GreenLink. All Rights Reserved.</p>
+      <p class="text-green-100">&copy; 2025 GreenLink. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Mobile Menu Script -->
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -70,12 +69,19 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Simulate successful sign in by redirecting to profile page
+    // Simulate sign in and store user data in localStorage
     const signinForm = document.getElementById('signin-form');
     signinForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      // Here you would normally validate the user's credentials.
-      // For this example, we simply redirect to the profile page.
+      // In a real-world scenario, you would validate credentials and fetch user data from a server.
+      // Here we simulate that with static data.
+      const user = {
+        fullName: "Ada Williams",
+        email: document.getElementById('email').value,
+        location: "Kaduna State",
+        accountType: "farmer"
+      };
+      localStorage.setItem('user', JSON.stringify(user));
       window.location.href = "profile.html";
     });
   </script>

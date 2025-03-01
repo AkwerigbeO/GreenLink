@@ -40,7 +40,6 @@
   <section class="py-16">
     <div class="container mx-auto max-w-md px-4">
       <h1 class="text-3xl font-bold text-center text-green-900 mb-6">Create Your Account</h1>
-      <!-- Account Type Selection -->
       <div class="mb-4 text-center">
         <label class="inline-flex items-center mr-4">
           <input type="radio" class="form-radio" name="accountType" value="farmer" checked>
@@ -77,7 +76,7 @@
   <!-- Footer -->
   <footer class="bg-green-900 py-6">
     <div class="container mx-auto text-center px-4">
-      <p class="text-green-100">&copy; 2023 GreenLink. All Rights Reserved.</p>
+      <p class="text-green-100">&copy; 2025 GreenLink. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -88,12 +87,17 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Simulate successful sign up by redirecting to profile page
+    // Save user data to localStorage upon sign up and redirect to profile page
     const signupForm = document.getElementById('signup-form');
     signupForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      // Here you would normally handle signup (send data to server, validation, etc.)
-      // For this example, we simulate success by redirecting.
+      const user = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        location: document.getElementById('location').value,
+        accountType: document.querySelector('input[name="accountType"]:checked').value
+      };
+      localStorage.setItem('user', JSON.stringify(user));
       window.location.href = "profile.html";
     });
   </script>
