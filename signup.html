@@ -8,7 +8,7 @@
 </head>
 <body class="bg-green-50 text-gray-800">
 
-  <!-- Header (same as above) -->
+  <!-- Header (same as before) -->
   <header class="bg-green-400 shadow">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <div class="text-2xl font-bold text-white">GreenLink</div>
@@ -51,7 +51,7 @@
           <span class="ml-2">Lender</span>
         </label>
       </div>
-      <form class="bg-white p-6 rounded shadow">
+      <form id="signup-form" class="bg-white p-6 rounded shadow">
         <div class="mb-4">
           <label class="block text-green-800 mb-2" for="fullName">Full Name</label>
           <input class="w-full border border-gray-300 p-2 rounded" type="text" id="fullName" placeholder="John Doe" required>
@@ -77,7 +77,7 @@
   <!-- Footer -->
   <footer class="bg-green-900 py-6">
     <div class="container mx-auto text-center px-4">
-      <p class="text-green-100">&copy; 2025 GreenLink. All Rights Reserved.</p>
+      <p class="text-green-100">&copy; 2023 GreenLink. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -86,6 +86,15 @@
     const mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Simulate successful sign up by redirecting to profile page
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Here you would normally handle signup (send data to server, validation, etc.)
+      // For this example, we simulate success by redirecting.
+      window.location.href = "profile.html";
     });
   </script>
   
